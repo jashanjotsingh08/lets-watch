@@ -24,7 +24,9 @@ export default {
     const searchMovies = () => {
       if (search.value != "") {
         axios
-          .get(`http://www.omdbapi.com/?apikey=${env.apiKey}&s=${search.value}`)
+          .get(
+            `https://www.omdbapi.com/?apikey=${env.apiKey}&s=${search.value}`
+          )
           .then((response) => {
             if (response) {
               movies.value = response.data.Search;

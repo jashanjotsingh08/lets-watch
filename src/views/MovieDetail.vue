@@ -20,7 +20,7 @@ export default {
     onBeforeMount(() => {
       axios
         .get(
-          `http://www.omdbapi.com/?apikey=${env.apiKey}&i=${route.params.id}&plot=full`
+          `https://www.omdbapi.com/?apikey=${env.apiKey}&i=${route.params.id}&plot=full`
         )
         .then((response) => {
           if (response && response.data) {
