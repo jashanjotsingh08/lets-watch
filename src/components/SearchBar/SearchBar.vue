@@ -85,7 +85,7 @@ export default {
       width: 100%;
       max-width: 300px;
       background-color: #42b843;
-      padding: 16px;
+      padding: 10px 16px;
       border-radius: 8px;
       color: #fff;
       font-size: 20px;
