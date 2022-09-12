@@ -1,15 +1,19 @@
 <template>
   <div>
-    <header>
-      <router-link to="/">
-        <h1><span>Lets</span>Watch</h1>
-      </router-link>
-    </header>
+    <NavBar />
     <main>
       <router-view />
     </main>
   </div>
 </template>
+
+<script>
+import NavBar from "./components/NavBar/NavBar.vue";
+
+export default {
+  components: { NavBar },
+};
+</script>
 
 <style lang="scss">
 * {
@@ -29,22 +33,5 @@ body {
 
 a {
   text-decoration: none;
-}
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  background-color: #2c3d4e;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
-
-  h1 {
-    color: #fff;
-    font-size: 28px;
-
-    span {
-      color: #42b883;
-    }
-  }
 }
 </style>

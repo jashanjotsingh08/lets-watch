@@ -19,14 +19,15 @@ export default {
 </script>
 <style lang="scss">
 .movie-card {
-  max-width: 50%;
-  flex: 1 1 50%;
+  max-width: 20vw;
+  flex: 1 1 20%;
   padding: 16px 8px;
 
   .movie-link {
     display: flex;
     flex-direction: column;
     height: 100%;
+    border-radius: 8px 8px;
 
     .card-image {
       position: relative;
@@ -34,7 +35,8 @@ export default {
 
       img {
         display: block;
-        widows: 100%;
+        // widows: 100%;
+        width: 100%;
         height: 275px;
         object-fit: cover;
       }
