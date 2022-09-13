@@ -23,8 +23,9 @@ export default {
     const movies = ref([]);
 
     const searchMovies = () => {
-      if (search.value != "") {
-        getSearchResult({ s: search.value }).then((response) => {
+      let searchKey = search.value;
+      if (searchKey != "") {
+        getSearchResult({ searchKey }).then((response) => {
           if (response) {
             movies.value = response.data.Search;
             // eslint-disable-next-line no-undef
