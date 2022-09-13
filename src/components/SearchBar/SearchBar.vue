@@ -13,8 +13,8 @@
 
 <script>
 import { ref } from "vue";
-import axios from "axios";
-import env from "@/env.js";
+import { getSearchResult } from "../../services/OmdbApi";
+
 export default {
   emits: ["movieList"],
   setup(props, context) {
@@ -22,19 +22,16 @@ export default {
     const movies = ref([]);
 
     const searchMovies = () => {
-      if (search.value != "") {
-        axios
-          .get(
-            `https://www.omdbapi.com/?apikey=${env.apiKey}&s=${search.value}`
-          )
-          .then((response) => {
-            if (response) {
-              movies.value = response.data.Search;
-              // eslint-disable-next-line no-undef
-              context.emit("movieList", movies.value);
-              search.value = "";
-            }
-          });
+      let searchKey = search.value;
+      if (searchKey != "") {
+        getSearchResult({ searchKey }).then((response) => {
+          if (response) {
+            movies.value = response.data.Search;
+            // eslint-disable-next-line no-undef
+            context.emit("movieList", movies.value);
+            search.value = "";
+          }
+        });
       }
     };
 
