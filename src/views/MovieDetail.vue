@@ -24,7 +24,6 @@ export default {
       if (params.id) {
         getItem(params).then((response) => {
           if (response && response.data) {
-            console.log(response.data);
             movie.value = response.data;
           }
         });
