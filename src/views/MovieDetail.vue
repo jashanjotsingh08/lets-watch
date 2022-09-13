@@ -10,23 +10,25 @@
 <script>
 import { ref, onBeforeMount } from "vue";
 import { useRoute } from "vue-router";
-import env from "@/env";
-import axios from "axios";
+import { getItem } from "@/services/OmdbApi";
 
 export default {
   setup() {
     const movie = ref({});
     const route = useRoute();
+    const params = {
+      id: route.params.id,
+      plot: "full",
+    };
     onBeforeMount(() => {
-      axios
-        .get(
-          `https://www.omdbapi.com/?apikey=${env.apiKey}&i=${route.params.id}&plot=full`
-        )
-        .then((response) => {
+      if (params.id) {
+        getItem(params).then((response) => {
           if (response && response.data) {
+            console.log(response.data);
             movie.value = response.data;
           }
         });
+      }
     });
     return {
       movie,
