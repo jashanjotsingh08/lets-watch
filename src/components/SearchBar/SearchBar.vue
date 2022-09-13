@@ -13,9 +13,8 @@
 
 <script>
 import { ref } from "vue";
-// import axios from "axios";
-// import env from "@/env.js";
 import { getSearchResult } from "../../services/OmdbApi";
+
 export default {
   emits: ["movieList"],
   setup(props, context) {
