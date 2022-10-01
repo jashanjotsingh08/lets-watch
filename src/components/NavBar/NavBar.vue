@@ -69,7 +69,7 @@ export default {
       font-size: 28px;
       padding: 10px 16px 10px 16px;
       span {
-        color: #42b883;
+        color: #3ba575;
       }
     }
   }
