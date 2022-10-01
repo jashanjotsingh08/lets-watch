@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const baseDomain = process.env.VUE_APP_OMDB_API_BASE_DOMAIN;
 const baseUrl = `${baseDomain}?apiKey=${process.env.VUE_APP_API_TOKEN}&`;
