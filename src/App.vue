@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <NavBar />
-    <main>
-      <router-view />
-    </main>
-  </div>
+  <NavBar />
+  <main>
+    <router-view />
+  </main>
 </template>
 
 <script>
-import NavBar from "./components/NavBar/NavBar.vue";
+import NavBar from './components/NavBar/NavBar.vue';
 
 export default {
   components: { NavBar },
@@ -20,7 +18,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 
   &::selection {
     background: transparentize($color: #42b883, $amount: 0.5);

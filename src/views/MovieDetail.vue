@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import { ref, onBeforeMount } from "vue";
-import { useRoute } from "vue-router";
-import { getItem } from "@/services/OmdbApi";
+import { ref, onBeforeMount } from 'vue';
+import { useRoute } from 'vue-router';
+import { getItem } from '@/services/OmdbApi';
 
 export default {
   setup() {
@@ -18,7 +18,7 @@ export default {
     const route = useRoute();
     const params = {
       id: route.params.id,
-      plot: "full",
+      plot: 'full',
     };
     onBeforeMount(() => {
       if (params.id) {
