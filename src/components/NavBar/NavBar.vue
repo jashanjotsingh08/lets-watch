@@ -14,7 +14,7 @@
       </label>
     </div>
     <div class="navbar-links">
-      <ul @click.stop.prevent>
+      <ul @click.stop.prevent="dropdown.close()">
         <li><a href="#">Movies</a></li>
         <li><a href="#">TV Shows</a></li>
         <li><a href="#">Top IMDB</a></li>
@@ -29,7 +29,6 @@ export default {
   setup() {
     const active = ref(false);
     const dropdown = {
-      // active: ref(false),
       close: () => {
         active.value = false;
       },
