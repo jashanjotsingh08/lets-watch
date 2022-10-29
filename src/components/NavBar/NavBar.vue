@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from "vue";
 export default {
   setup() {
     const active = ref(false);
@@ -36,11 +36,11 @@ export default {
     };
 
     onBeforeUnmount(() => {
-      document.removeEventListener('click', dropdown.close);
+      document.removeEventListener("click", dropdown.close);
     });
 
     onMounted(() => {
-      document.addEventListener('click', dropdown.close);
+      document.addEventListener("click", dropdown.close);
     });
 
     return {

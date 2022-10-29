@@ -11,10 +11,10 @@
 
 <script>
 // @ is an alias to /src
-import { ref } from 'vue';
-import FeatureCard from '@/components/FeatureCard/FeatureCard.vue';
-import SearchBar from '@/components/SearchBar/SearchBar.vue';
-import MovieCard from '@/components/MovieCard/MovieCard.vue';
+import { ref } from "vue";
+import FeatureCard from "@/components/FeatureCard/FeatureCard.vue";
+import SearchBar from "@/components/SearchBar/SearchBar.vue";
+import MovieCard from "@/components/MovieCard/MovieCard.vue";
 
 export default {
   setup() {

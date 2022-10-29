@@ -14,7 +14,7 @@
 </template>
 <script>
 export default {
-  props: ['movie'],
+  props: ["movie"],
 };
 </script>
 <style lang="scss">

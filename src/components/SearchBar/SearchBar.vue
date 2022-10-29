@@ -12,24 +12,24 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import { getSearchResult } from '../../services/OmdbApi';
+import { ref } from "vue";
+import { getSearchResult } from "../../services/OmdbApi";
 
 export default {
-  emits: ['movieList'],
+  emits: ["movieList"],
   setup(props, context) {
-    const search = ref('');
+    const search = ref("");
     const movies = ref([]);
 
     const searchMovies = () => {
       let searchKey = search.value;
-      if (searchKey != '') {
+      if (searchKey != "") {
         getSearchResult({ searchKey }).then((response) => {
           if (response) {
             movies.value = response.data.Search;
             // eslint-disable-next-line no-undef
-            context.emit('movieList', movies.value);
-            search.value = '';
+            context.emit("movieList", movies.value);
+            search.value = "";
           }
         });
       }
@@ -59,7 +59,7 @@ export default {
     outline: none;
     background: none;
 
-    &[type='text'] {
+    &[type="text"] {
       width: 100%;
       color: #fff;
       background-color: #496583;
@@ -78,7 +78,7 @@ export default {
       }
     }
 
-    &[type='submit'] {
+    &[type="submit"] {
       width: 100%;
       max-width: 300px;
       background-color: #3ba575;
