@@ -1,18 +1,24 @@
 <template>
-  <NavBar />
-  <main>
-    <router-view />
-  </main>
+  <v-app>
+    <NavBar />
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
 import NavBar from './components/NavBar/NavBar.vue';
 
 export default {
+  name: 'App',
+
+  data: () => ({
+    //
+  }),
   components: { NavBar },
 };
 </script>
-
 <style lang="scss">
 * {
   margin: 0;
